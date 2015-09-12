@@ -1,0 +1,17 @@
+<div class="ad">
+    <h3>{{ad.name}}</h3>
+    <div class="layout horizontal wrap space-around">
+        <div ng-repeat="sku in ad.skus"
+                        class="sku card">
+            <div class="layout horizontal flex">
+                <div class="thumbnail">
+                    <img ng-src="{{sku.default_bouquet.image_urls.website_main}}" alt="">
+                </div>
+                <div class="layout vertical flex info">
+                    <h4>{{sku.default_bouquet.name}}</h4>
+                    <div class="desc">{{sku.default_bouquet.description}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

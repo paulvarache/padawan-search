@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Padawan search</title>
+        <link rel="stylesheet" href="/css/minimal.css">
+    </head>
+    <body>
+        <div ng-controller="AdListController">
+            <div class="layout vertical justify-center">
+                <div class="search">
+                    <label for="">Search</label>
+                    <input type="text" ng-model="q" ng-change="onSearchChange()">
+                </div>
+                <div class="layout horizontal wrap">
+                    <ad-card ng-repeat="ad in results" ad="ad"></ad-card>
+                </div>
+            </div>
+        </div>
+        <script src="/vendor/angular/angular.js"></script>
+        <script src="/app/main.js"></script>
+
+        <script src="/app/common/services.js"></script>
+
+        <script src="/app/components/ad/ad.js"></script>
+        <script src="/app/components/ad/ad.controllers.js"></script>
+        <script src="/app/components/ad/ad.services.js"></script>
+        <script>
+            window.apiConfig = {
+                host: 'api.search.padawan.local.com',
+                port: 80,
+                secure: false,
+                prefix: '/v1'
+            }
+        </script>
+    </body>
+</html>
