@@ -3,6 +3,7 @@
 
 A fast made webapp/API sample.
 
+![](https://raw.githubusercontent.com/paulvarache/padawan-search/master/screen.gif)
 
 # Easy Start
 The quicker way to start the app, is to use the Vagrantfile provided. It will
